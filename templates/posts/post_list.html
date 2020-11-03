@@ -3,9 +3,28 @@
 {% block content %}
 
 <div class="container">
-    {% for object in object_list %}
-    <p>{{ object.title }}</p>
-    {% endfor %}
+    <div class="row">
+        {% for object in object_list %}
+        <div class="col-4">
+            <a href="{{ object.get_absolute_url }}">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ object.thumbnail.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ object.title }}</h5>
+                        <p class="card-text">{{ object.content|truncatechars:40 }}</p>
+                        <hr />
+                        <p>
+                            <span>View Count</span>
+                            <span>Love</span>
+                            <span>Comments</span>
+                        </p>
+
+                    </div>
+                </div>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock content %}
