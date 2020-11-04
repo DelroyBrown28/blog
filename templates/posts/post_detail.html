@@ -11,8 +11,8 @@
             <hr />
 
             <div>
-                <span><i class="fas fa-comments ml-2"></i>{{ object.get_view_count }}</span>
-                <span><i class="fas fa-eye ml-2"></i>{{ object.get_comment_count }}</span>
+                <span><i class="fas fa-eye ml-2"></i>{{ object.get_view_count }}</span>
+                <span><i class="fas fa-comments ml-2"></i>{{ object.get_comment_count }}</span>
                 <span><i class="fas fa-heart ml-2"></i>{{ object.get_love_count }}</span>
                 <span class="float-right">Posted {{ object.publish_date|timesince }} ago</span>
             </div>
