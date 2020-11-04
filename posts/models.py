@@ -24,6 +24,9 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("detail", kwargs={"slug": self.slug})
+    
+    def get_love_url(self):
+        return reverse("love", kwargs={"slug": self.slug})
 
     @property
     def get_comment_count(self):
